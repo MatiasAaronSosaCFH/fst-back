@@ -27,7 +27,7 @@ public class Category {
     @Column(name = "name")
     private String name;
     @Column(name = "is_present")
-    private Boolean isPresent = true;
+    private Boolean isPresent;
     @Temporal(TemporalType.DATE)
     @Column(name = "create_at")
     private Date createAt;

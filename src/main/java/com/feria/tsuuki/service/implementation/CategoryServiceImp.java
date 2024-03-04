@@ -22,7 +22,11 @@ public class CategoryServiceImp implements CategoryService {
 
     @Override
     public List<CategoryResponse> findAllAvailable() {
-        return categoryRepository.findAllAvailable().stream().map(CategoryResponse::new).toList();
+        return categoryRepository
+                .findAllAvailable()
+                .stream()
+                .map(CategoryResponse::new)
+                .toList();
     }
 
     @Override
@@ -51,6 +55,7 @@ public class CategoryServiceImp implements CategoryService {
                 .builder()
                 .createAt(now)
                 .updateAt(now)
+                .isPresent(true)
                 .name(categoryRequest.name())
                 .build());
 
@@ -95,7 +100,11 @@ public class CategoryServiceImp implements CategoryService {
 
     @Override
     public List<CategoryResponse> findAll() {
-        return categoryRepository.findAll().stream().map(CategoryResponse::new).toList();
+        return categoryRepository
+                .findAll()
+                .stream()
+                .map(CategoryResponse::new)
+                .toList();
     }
 
 }

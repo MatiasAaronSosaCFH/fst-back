@@ -1,7 +1,8 @@
 package com.feria.tsuuki.models.product;
 
-import java.sql.Date;
+import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 import com.feria.tsuuki.models.image.Image;
 import com.feria.tsuuki.models.item.Item;
@@ -34,6 +35,8 @@ public class Product {
     private String name;
     @Column(name = "price")
     private Double price;
+    @Column(name = "measures")
+    private Map<String, Integer> measure;
     @Column(name = "description", columnDefinition = "TEXT")
     private String description;
     @Column(name = "is_present")
